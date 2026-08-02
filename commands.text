@@ -1,0 +1,42 @@
+//BELLOW COMMANDS ARE USED TO GENERATE NESTJS PROJECT AND MODULES ||
+//// INSTALL NESTJS CLI NOT GLOBALY ONLY FOR THIS PROJECT
+
+// it generate a new nest project
+npx @nestjs/cli@latest new my-nest-project
+
+// it generate three files: auth.controller.ts, auth.service.ts, auth.module.ts, and DTO except spec files
+npx nest generate resource auth --no-spec
+
+// this command will generate a new module called "users" in your NestJS project. The module will be created in the "src" directory of your project, and it will include a users.module.ts file. You can then add controllers, services, and other components to this module as needed.
+npx run nest -- generate module users
+
+// this command will generate a new controller called "users" in your NestJS project. The controller will be created in the "src/users" directory of your project, and it will include a users.controller.ts file. You can then add routes and methods to this controller as needed.
+npx run nest -- generate controller users
+
+// this command for generate only service
+npx run nest -- generate service users
+
+// this command for starting the nestjs project in production mode and development mode
+npm run start
+
+// this command for starting the nestjs project in development mode(as  nodemon is used to watch for changes and automatically restart the server)
+npm run start:dev
+
+
+
+
+//Git commands to push the project to github repository
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/afidhu/nestjs-node-prisma-basics.git
+git push -u origin main
+
+
+
+//POSTGRES DB SETUP
+npm install @prisma/adapter-pg pg
+npm install -D @types/pg
+
+click => https://nestjs-prisma.dev/
