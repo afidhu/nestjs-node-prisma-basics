@@ -1,3 +1,5 @@
+import { JobsModule } from './backgroundJob/jobs.module';
+
 import "dotenv/config";
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
@@ -12,7 +14,7 @@ import { join } from 'path';
 
 
 @Module({
-  imports: [PrismaModule,AuthModule, UsersModule,
+  imports: [ JobsModule,PrismaModule,AuthModule, UsersModule,
      JwtModule.register({
       global: true,
       secret:  process.env.SECRET_JWT,
