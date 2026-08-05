@@ -11,11 +11,11 @@ import { AuthGuard } from './guards/auth.guard';
   providers: [AuthService,
     // {
     //   provide: APP_GUARD,
-    //   useClass: AuthGuard,
+    //   useClass: AuthGuard, // THIS MAKE IT GLOBAL GUARD
     // },
     // {
     //   provide: APP_GUARD,
-    //   useClass: RolesGuard, THODE THIS IS GLOBAL GUARD
+    //   useClass: RolesGuard, // THOSE THIS IS GLOBAL GUARD
     // },
   ],
 
